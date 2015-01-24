@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <name>Akka Hystrix Example</name>
+   <groupId>eivindw</groupId>
+   <artifactId>akka-hystrix-example</artifactId>
+   <packaging>jar</packaging>
+   <version>1.0-SNAPSHOT</version>
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+      <akka.version>2.3.8</akka.version>
+      <hystrix.version>1.4.0-RC5</hystrix.version>
+      <dropwizard.version>0.8.0-rc2</dropwizard.version>
+      <junit.version>4.12</junit.version>
+   </properties>
+
+   <dependencies>
+      <dependency>
+         <groupId>com.typesafe.akka</groupId>
+         <artifactId>akka-actor_2.11</artifactId>
+         <version>${akka.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>com.netflix.hystrix</groupId>
+         <artifactId>hystrix-core</artifactId>
+         <version>${hystrix.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>com.netflix.hystrix</groupId>
+         <artifactId>hystrix-metrics-event-stream</artifactId>
+         <version>${hystrix.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>io.dropwizard</groupId>
+         <artifactId>dropwizard-core</artifactId>
+         <version>${dropwizard.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>${junit.version}</version>
+         <scope>test</scope>
+      </dependency>
+   </dependencies>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.0</version>
+            <configuration>
+               <source>1.8</source>
+               <target>1.8</target>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+</project>
+
